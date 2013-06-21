@@ -1,0 +1,10 @@
+# script for gnuplot
+
+set terminal png
+set output 'c_nonsym.png'
+
+set autoscale
+set title 'Lattice constant "c" versus k points per atom for bulk graphite'
+set xlabel 'K points per atom'
+set ylabel 'Lattice constant [Angstroms]'
+plot "LDA_nonsym" using 1:3 with linespoints title 'LDA', "PBE_nonsym" using 1:3 with linespoints title 'PBE', 6.7 title 'LDA Theory', 7.3 title 'PBE Theory', 6.71 title 'Experiment'
